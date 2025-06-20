@@ -1,7 +1,2 @@
 /.venv
-/database_schema.sql
-/tafsir_data.csv
-/tafsir_data.json
-/tafsir_data_aliraab-almuyassar.csv
-/tafsir_data_aliraab-almuyassar.json
-/tafsir_extraction.log
+/tafsir_data

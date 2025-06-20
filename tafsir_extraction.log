@@ -1,0 +1,371 @@
+2025-06-18 21:48:44,896 - INFO - Extracting Surah 114: An-Nas (6 ayahs)
+2025-06-18 21:48:44,936 - INFO - Extracting: https://tafsir.app/alrazi/114/1
+2025-06-18 21:48:53,057 - INFO - Extracting: https://tafsir.app/alrazi/114/2
+2025-06-18 21:48:56,508 - INFO - Extracting: https://tafsir.app/alrazi/114/3
+2025-06-18 21:48:59,487 - INFO - Extracting: https://tafsir.app/alrazi/114/4
+2025-06-18 21:49:04,278 - INFO - Extracting: https://tafsir.app/alrazi/114/5
+2025-06-18 21:49:07,848 - INFO - Extracting: https://tafsir.app/alrazi/114/6
+2025-06-18 21:49:11,140 - INFO - Data saved to tafsir_data.json
+2025-06-18 21:49:11,165 - INFO - Data saved to tafsir_data.csv
+2025-06-18 22:09:07,365 - INFO - Extracting Surah 114: An-Nas (6 ayahs)
+2025-06-18 22:09:07,397 - INFO - Extracting: https://tafsir.app/aliraab-almuyassar/114/1
+2025-06-18 22:09:11,830 - INFO - Extracting: https://tafsir.app/aliraab-almuyassar/114/2
+2025-06-18 22:09:14,891 - INFO - Extracting: https://tafsir.app/aliraab-almuyassar/114/3
+2025-06-18 22:09:18,796 - INFO - Extracting: https://tafsir.app/aliraab-almuyassar/114/4
+2025-06-18 22:09:21,806 - INFO - Extracting: https://tafsir.app/aliraab-almuyassar/114/5
+2025-06-18 22:09:25,574 - INFO - Extracting: https://tafsir.app/aliraab-almuyassar/114/6
+2025-06-18 22:09:28,465 - INFO - Data saved to tafsir_data_aliraab-almuyassar.json
+2025-06-18 22:09:28,494 - INFO - Data saved to tafsir_data_aliraab-almuyassar.csv
+2025-06-20 18:40:55,493 - INFO - Extracting Surah 1: Al-Fatihah (7 ayahs)
+2025-06-20 18:40:55,512 - INFO - Extracting: https://tafsir.app/alaloosi/1/1
+2025-06-20 18:40:59,096 - INFO - Extracting: https://tafsir.app/alaloosi/1/2
+2025-06-20 18:41:02,403 - INFO - Extracting: https://tafsir.app/alaloosi/1/3
+2025-06-20 18:41:04,916 - INFO - Extracting: https://tafsir.app/alaloosi/1/4
+2025-06-20 18:41:07,577 - INFO - Extracting: https://tafsir.app/alaloosi/1/5
+2025-06-20 18:41:10,072 - INFO - Extracting: https://tafsir.app/alaloosi/1/6
+2025-06-20 18:41:12,888 - INFO - Extracting: https://tafsir.app/alaloosi/1/7
+2025-06-20 18:41:15,555 - INFO - Data saved to tafsir_data/alaloosi.json
+2025-06-20 18:41:15,570 - ERROR - Failed to save CSV: Cannot save file into a non-existent directory: 'tafsir__data'
+2025-06-20 18:47:22,557 - INFO - Extracting Surah 1: Al-Fatihah (7 ayahs)
+2025-06-20 18:47:22,573 - INFO - Extracting: https://tafsir.app/alaloosi/1/1
+2025-06-20 18:47:25,965 - INFO - Extracting: https://tafsir.app/alaloosi/1/2
+2025-06-20 18:47:27,349 - INFO - Extracting: https://tafsir.app/alaloosi/1/3
+2025-06-20 18:47:28,677 - INFO - Extracting: https://tafsir.app/alaloosi/1/4
+2025-06-20 18:47:29,968 - INFO - Extracting: https://tafsir.app/alaloosi/1/5
+2025-06-20 18:47:31,322 - INFO - Extracting: https://tafsir.app/alaloosi/1/6
+2025-06-20 18:47:32,709 - INFO - Extracting: https://tafsir.app/alaloosi/1/7
+2025-06-20 18:47:34,039 - INFO - Data saved to tafsir_data/alaloosi.json
+2025-06-20 18:47:34,100 - INFO - Data saved to tafsir_data/alaloosi.csv
+2025-06-20 18:48:05,733 - INFO - Extracting Surah 1: Al-Fatihah (7 ayahs)
+2025-06-20 18:48:05,754 - INFO - Extracting: https://tafsir.app/alrazi/1/1
+2025-06-20 18:48:09,360 - INFO - Extracting: https://tafsir.app/alrazi/1/2
+2025-06-20 18:48:13,059 - INFO - Extracting: https://tafsir.app/alrazi/1/3
+2025-06-20 18:48:16,274 - INFO - Extracting: https://tafsir.app/alrazi/1/4
+2025-06-20 18:48:18,695 - INFO - Extracting: https://tafsir.app/alrazi/1/5
+2025-06-20 18:48:21,177 - INFO - Extracting: https://tafsir.app/alrazi/1/6
+2025-06-20 18:48:23,505 - INFO - Extracting: https://tafsir.app/alrazi/1/7
+2025-06-20 18:48:25,846 - INFO - Data saved to tafsir_data/alrazi.json
+2025-06-20 18:48:25,903 - INFO - Data saved to tafsir_data/alrazi.csv
+2025-06-20 18:48:49,622 - INFO - Extracting Surah 1: Al-Fatihah (7 ayahs)
+2025-06-20 18:48:49,646 - INFO - Extracting: https://tafsir.app/ibn-katheer/1/1
+2025-06-20 18:48:52,561 - INFO - Extracting: https://tafsir.app/ibn-katheer/1/2
+2025-06-20 18:48:55,258 - INFO - Extracting: https://tafsir.app/ibn-katheer/1/3
+2025-06-20 18:48:57,731 - INFO - Extracting: https://tafsir.app/ibn-katheer/1/4
+2025-06-20 18:49:00,109 - INFO - Extracting: https://tafsir.app/ibn-katheer/1/5
+2025-06-20 18:49:02,433 - INFO - Extracting: https://tafsir.app/ibn-katheer/1/6
+2025-06-20 18:49:04,375 - INFO - Extracting: https://tafsir.app/ibn-katheer/1/7
+2025-06-20 18:49:06,323 - INFO - Data saved to tafsir_data/ibn-katheer.json
+2025-06-20 18:49:06,383 - INFO - Data saved to tafsir_data/ibn-katheer.csv
+2025-06-20 18:49:19,432 - INFO - Extracting Surah 1: Al-Fatihah (7 ayahs)
+2025-06-20 18:49:19,455 - INFO - Extracting: https://tafsir.app/tabari/1/1
+2025-06-20 18:49:23,179 - INFO - Extracting: https://tafsir.app/tabari/1/2
+2025-06-20 18:49:25,046 - INFO - Extracting: https://tafsir.app/tabari/1/3
+2025-06-20 18:49:27,484 - INFO - Extracting: https://tafsir.app/tabari/1/4
+2025-06-20 18:49:29,960 - INFO - Extracting: https://tafsir.app/tabari/1/5
+2025-06-20 18:49:32,413 - INFO - Extracting: https://tafsir.app/tabari/1/6
+2025-06-20 18:49:34,786 - INFO - Extracting: https://tafsir.app/tabari/1/7
+2025-06-20 18:49:37,156 - INFO - Data saved to tafsir_data/tabari.json
+2025-06-20 18:49:37,183 - INFO - Data saved to tafsir_data/tabari.csv
+2025-06-20 18:50:07,549 - INFO - Extracting Surah 1: Al-Fatihah (7 ayahs)
+2025-06-20 18:50:07,569 - INFO - Extracting: https://tafsir.app/qurtubi/1/1
+2025-06-20 18:50:10,128 - INFO - Extracting: https://tafsir.app/qurtubi/1/2
+2025-06-20 18:50:12,524 - INFO - Extracting: https://tafsir.app/qurtubi/1/3
+2025-06-20 18:50:14,850 - INFO - Extracting: https://tafsir.app/qurtubi/1/4
+2025-06-20 18:50:18,021 - INFO - Extracting: https://tafsir.app/qurtubi/1/5
+2025-06-20 18:50:20,824 - INFO - Extracting: https://tafsir.app/qurtubi/1/6
+2025-06-20 18:50:23,125 - INFO - Extracting: https://tafsir.app/qurtubi/1/7
+2025-06-20 18:50:25,219 - INFO - Data saved to tafsir_data/qurtubi.json
+2025-06-20 18:50:25,286 - INFO - Data saved to tafsir_data/qurtubi.csv
+2025-06-20 19:01:25,329 - INFO - Extracting: https://tafsir.app/alaloosi/1/1
+2025-06-20 19:01:27,750 - INFO - Data saved to tafsir_data/alaloosi.json
+2025-06-20 19:01:27,767 - INFO - Data saved to tafsir_data/alaloosi.csv
+2025-06-20 19:02:59,810 - INFO - Extracting: https://tafsir.app/alaloosi/1/1
+2025-06-20 19:03:01,414 - INFO - Data saved to tafsir_data/alaloosi.json
+2025-06-20 19:03:01,468 - INFO - Data saved to tafsir_data/alaloosi.csv
+2025-06-20 19:08:35,685 - INFO - Extracting: https://tafsir.app/alaloosi/1/1
+2025-06-20 19:08:38,379 - INFO - Data saved to tafsir_data/alaloosi.json
+2025-06-20 19:08:38,388 - INFO - Data saved to tafsir_data/alaloosi.csv
+2025-06-20 20:07:21,409 - INFO - Extracting: https://tafsir.app/alaloosi/1/1
+2025-06-20 20:07:26,099 - INFO - Data saved to tafsir_data/alaloosi.json
+2025-06-20 20:07:26,105 - INFO - Data saved to tafsir_data/alaloosi.csv
+2025-06-20 21:41:11,991 - INFO - Extracting: https://tafsir.app/alaloosi/1/1
+2025-06-20 21:41:14,874 - ERROR - Error parsing content for Surah 1, Ayah 1: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2025-06-20 21:41:55,153 - INFO - Extracting: https://tafsir.app/alaloosi/1/1
+2025-06-20 21:41:58,132 - INFO - Data saved to tafsir_data/alaloosi.json
+2025-06-20 21:41:58,137 - INFO - Data saved to tafsir_data/alaloosi.csv
+2025-06-20 21:42:48,664 - INFO - Extracting: https://tafsir.app/ibn-katheer/1/1
+2025-06-20 21:42:51,707 - INFO - Data saved to tafsir_data/ibn-katheer.json
+2025-06-20 21:42:51,712 - INFO - Data saved to tafsir_data/ibn-katheer.csv
+2025-06-20 22:01:24,619 - INFO - Starting extraction of entire Quran tafsir
+2025-06-20 22:01:24,652 - INFO - Extracting Surah 1: Al-Fatihah (7 ayahs)
+2025-06-20 22:01:24,653 - INFO - Extracting: https://tafsir.app/alaloosi/1/1
+2025-06-20 22:01:29,847 - INFO - Extracting: https://tafsir.app/alaloosi/1/2
+2025-06-20 22:01:32,009 - INFO - Extracting: https://tafsir.app/alaloosi/1/3
+2025-06-20 22:01:34,576 - INFO - Extracting: https://tafsir.app/alaloosi/1/4
+2025-06-20 22:01:37,484 - INFO - Extracting: https://tafsir.app/alaloosi/1/5
+2025-06-20 22:01:39,664 - INFO - Extracting: https://tafsir.app/alaloosi/1/6
+2025-06-20 22:01:41,951 - INFO - Extracting: https://tafsir.app/alaloosi/1/7
+2025-06-20 22:01:44,191 - INFO - Extracting Surah 2: Al-Baqarah (286 ayahs)
+2025-06-20 22:01:44,192 - INFO - Extracting: https://tafsir.app/alaloosi/2/1
+2025-06-20 22:01:46,577 - INFO - Extracting: https://tafsir.app/alaloosi/2/2
+2025-06-20 22:01:48,760 - INFO - Extracting: https://tafsir.app/alaloosi/2/3
+2025-06-20 22:01:50,827 - INFO - Extracting: https://tafsir.app/alaloosi/2/4
+2025-06-20 22:01:52,572 - INFO - Extracting: https://tafsir.app/alaloosi/2/5
+2025-06-20 22:01:54,256 - INFO - Extracting: https://tafsir.app/alaloosi/2/6
+2025-06-20 22:01:56,505 - INFO - Extracting: https://tafsir.app/alaloosi/2/7
+2025-06-20 22:01:58,776 - INFO - Extracting: https://tafsir.app/alaloosi/2/8
+2025-06-20 22:02:02,321 - INFO - Extracting: https://tafsir.app/alaloosi/2/9
+2025-06-20 22:02:04,775 - INFO - Extracting: https://tafsir.app/alaloosi/2/10
+2025-06-20 22:02:07,038 - INFO - Extracting: https://tafsir.app/alaloosi/2/11
+2025-06-20 22:02:08,798 - INFO - Extracting: https://tafsir.app/alaloosi/2/12
+2025-06-20 22:02:12,381 - INFO - Extracting: https://tafsir.app/alaloosi/2/13
+2025-06-20 22:02:14,340 - INFO - Extracting: https://tafsir.app/alaloosi/2/14
+2025-06-20 22:02:19,666 - INFO - Extracting: https://tafsir.app/alaloosi/2/15
+2025-06-20 22:02:21,878 - INFO - Extracting: https://tafsir.app/alaloosi/2/16
+2025-06-20 22:02:23,874 - INFO - Extracting: https://tafsir.app/alaloosi/2/17
+2025-06-20 22:02:25,974 - INFO - Extracting: https://tafsir.app/alaloosi/2/18
+2025-06-20 22:02:28,229 - INFO - Extracting: https://tafsir.app/alaloosi/2/19
+2025-06-20 22:02:30,638 - INFO - Extracting: https://tafsir.app/alaloosi/2/20
+2025-06-20 22:02:32,579 - INFO - Extracting: https://tafsir.app/alaloosi/2/21
+2025-06-20 22:02:35,087 - INFO - Extracting: https://tafsir.app/alaloosi/2/22
+2025-06-20 22:02:37,233 - INFO - Extracting: https://tafsir.app/alaloosi/2/23
+2025-06-20 22:02:45,758 - INFO - Extracting: https://tafsir.app/alaloosi/2/24
+2025-06-20 22:02:48,335 - INFO - Extracting: https://tafsir.app/alaloosi/2/25
+2025-06-20 22:02:53,471 - INFO - Extracting: https://tafsir.app/alaloosi/2/26
+2025-06-20 22:02:56,668 - INFO - Extracting: https://tafsir.app/alaloosi/2/27
+2025-06-20 22:02:59,084 - INFO - Extracting: https://tafsir.app/alaloosi/2/28
+2025-06-20 22:03:03,042 - INFO - Extracting: https://tafsir.app/alaloosi/2/29
+2025-06-20 22:03:07,087 - INFO - Extracting: https://tafsir.app/alaloosi/2/30
+2025-06-20 22:03:09,766 - INFO - Extracting: https://tafsir.app/alaloosi/2/31
+2025-06-20 22:03:12,530 - INFO - Extracting: https://tafsir.app/alaloosi/2/32
+2025-06-20 22:03:15,579 - INFO - Extracting: https://tafsir.app/alaloosi/2/33
+2025-06-20 22:03:24,636 - INFO - Extracting: https://tafsir.app/alaloosi/2/34
+2025-06-20 22:03:27,023 - INFO - Extracting: https://tafsir.app/alaloosi/2/35
+2025-06-20 22:03:29,351 - INFO - Extracting: https://tafsir.app/alaloosi/2/36
+2025-06-20 22:03:32,109 - INFO - Extracting: https://tafsir.app/alaloosi/2/37
+2025-06-20 22:03:34,681 - INFO - Extracting: https://tafsir.app/alaloosi/2/38
+2025-06-20 22:03:37,156 - INFO - Extracting: https://tafsir.app/alaloosi/2/39
+2025-06-20 22:03:39,064 - INFO - Extracting: https://tafsir.app/alaloosi/2/40
+2025-06-20 22:03:41,699 - INFO - Extracting: https://tafsir.app/alaloosi/2/41
+2025-06-20 22:03:44,474 - INFO - Extracting: https://tafsir.app/alaloosi/2/42
+2025-06-20 22:03:47,104 - INFO - Extracting: https://tafsir.app/alaloosi/2/43
+2025-06-20 22:03:52,708 - INFO - Extracting: https://tafsir.app/alaloosi/2/44
+2025-06-20 22:03:55,254 - INFO - Extracting: https://tafsir.app/alaloosi/2/45
+2025-06-20 22:03:57,564 - INFO - Extracting: https://tafsir.app/alaloosi/2/46
+2025-06-20 22:04:00,254 - INFO - Extracting: https://tafsir.app/alaloosi/2/47
+2025-06-20 22:04:05,516 - INFO - Extracting: https://tafsir.app/alaloosi/2/48
+2025-06-20 22:04:07,435 - INFO - Extracting: https://tafsir.app/alaloosi/2/49
+2025-06-20 22:04:10,013 - INFO - Extracting: https://tafsir.app/alaloosi/2/50
+2025-06-20 22:04:12,267 - INFO - Extracting: https://tafsir.app/alaloosi/2/51
+2025-06-20 22:04:17,482 - INFO - Extracting: https://tafsir.app/alaloosi/2/52
+2025-06-20 22:04:19,864 - INFO - Extracting: https://tafsir.app/alaloosi/2/53
+2025-06-20 22:04:22,125 - INFO - Extracting: https://tafsir.app/alaloosi/2/54
+2025-06-20 22:04:24,468 - INFO - Extracting: https://tafsir.app/alaloosi/2/55
+2025-06-20 22:04:27,397 - INFO - Extracting: https://tafsir.app/alaloosi/2/56
+2025-06-20 22:04:29,632 - INFO - Extracting: https://tafsir.app/alaloosi/2/57
+2025-06-20 22:04:31,893 - INFO - Extracting: https://tafsir.app/alaloosi/2/58
+2025-06-20 22:04:34,299 - INFO - Extracting: https://tafsir.app/alaloosi/2/59
+2025-06-20 22:04:36,649 - INFO - Extracting: https://tafsir.app/alaloosi/2/60
+2025-06-20 22:04:39,209 - INFO - Extracting: https://tafsir.app/alaloosi/2/61
+2025-06-20 22:04:41,859 - INFO - Extracting: https://tafsir.app/alaloosi/2/62
+2025-06-20 22:04:44,290 - INFO - Extracting: https://tafsir.app/alaloosi/2/63
+2025-06-20 22:04:46,820 - INFO - Extracting: https://tafsir.app/alaloosi/2/64
+2025-06-20 22:04:50,635 - INFO - Extracting: https://tafsir.app/alaloosi/2/65
+2025-06-20 22:04:52,756 - INFO - Extracting: https://tafsir.app/alaloosi/2/66
+2025-06-20 22:04:55,093 - INFO - Extracting: https://tafsir.app/alaloosi/2/67
+2025-06-20 22:04:57,197 - INFO - Extracting: https://tafsir.app/alaloosi/2/68
+2025-06-20 22:04:58,873 - INFO - Extracting: https://tafsir.app/alaloosi/2/69
+2025-06-20 22:05:01,144 - INFO - Extracting: https://tafsir.app/alaloosi/2/70
+2025-06-20 22:05:03,238 - INFO - Extracting: https://tafsir.app/alaloosi/2/71
+2025-06-20 22:05:05,459 - INFO - Extracting: https://tafsir.app/alaloosi/2/72
+2025-06-20 22:05:07,893 - INFO - Extracting: https://tafsir.app/alaloosi/2/73
+2025-06-20 22:05:10,235 - INFO - Extracting: https://tafsir.app/alaloosi/2/74
+2025-06-20 22:05:12,470 - INFO - Extracting: https://tafsir.app/alaloosi/2/75
+2025-06-20 22:05:14,700 - INFO - Extracting: https://tafsir.app/alaloosi/2/76
+2025-06-20 22:05:16,412 - INFO - Extracting: https://tafsir.app/alaloosi/2/77
+2025-06-20 22:05:18,220 - INFO - Extracting: https://tafsir.app/alaloosi/2/78
+2025-06-20 22:05:20,564 - INFO - Extracting: https://tafsir.app/alaloosi/2/79
+2025-06-20 22:05:22,717 - INFO - Extracting: https://tafsir.app/alaloosi/2/80
+2025-06-20 22:05:24,948 - INFO - Extracting: https://tafsir.app/alaloosi/2/81
+2025-06-20 22:05:27,192 - INFO - Extracting: https://tafsir.app/alaloosi/2/82
+2025-06-20 22:05:29,917 - INFO - Extracting: https://tafsir.app/alaloosi/2/83
+2025-06-20 22:07:16,051 - INFO - Extracting Surah 105: Al-Fil (5 ayahs)
+2025-06-20 22:07:16,058 - INFO - Extracting: https://tafsir.app/alaloosi/105/1
+2025-06-20 22:07:23,393 - INFO - Extracting: https://tafsir.app/alaloosi/105/2
+2025-06-20 22:07:26,018 - INFO - Extracting: https://tafsir.app/alaloosi/105/3
+2025-06-20 22:07:29,165 - INFO - Extracting: https://tafsir.app/alaloosi/105/4
+2025-06-20 22:07:31,979 - INFO - Extracting: https://tafsir.app/alaloosi/105/5
+2025-06-20 22:07:35,296 - INFO - Extracting Surah 106: Quraysh (4 ayahs)
+2025-06-20 22:07:35,297 - INFO - Extracting: https://tafsir.app/alaloosi/106/1
+2025-06-20 22:07:38,200 - INFO - Extracting: https://tafsir.app/alaloosi/106/2
+2025-06-20 22:07:41,249 - INFO - Extracting: https://tafsir.app/alaloosi/106/3
+2025-06-20 22:07:43,375 - INFO - Extracting: https://tafsir.app/alaloosi/106/4
+2025-06-20 22:07:46,548 - INFO - Extracting Surah 107: Al-Ma'un (7 ayahs)
+2025-06-20 22:07:46,549 - INFO - Extracting: https://tafsir.app/alaloosi/107/1
+2025-06-20 22:07:49,831 - INFO - Extracting: https://tafsir.app/alaloosi/107/2
+2025-06-20 22:07:52,863 - INFO - Extracting: https://tafsir.app/alaloosi/107/3
+2025-06-20 22:07:56,735 - INFO - Extracting: https://tafsir.app/alaloosi/107/4
+2025-06-20 22:07:59,753 - INFO - Extracting: https://tafsir.app/alaloosi/107/5
+2025-06-20 22:08:02,125 - INFO - Extracting: https://tafsir.app/alaloosi/107/6
+2025-06-20 22:08:04,632 - INFO - Extracting: https://tafsir.app/alaloosi/107/7
+2025-06-20 22:08:07,889 - INFO - Extracting Surah 108: Al-Kawthar (3 ayahs)
+2025-06-20 22:08:07,889 - INFO - Extracting: https://tafsir.app/alaloosi/108/1
+2025-06-20 22:08:11,723 - INFO - Extracting: https://tafsir.app/alaloosi/108/2
+2025-06-20 22:08:14,825 - INFO - Extracting: https://tafsir.app/alaloosi/108/3
+2025-06-20 22:08:18,305 - INFO - Extracting Surah 109: Al-Kafirun (6 ayahs)
+2025-06-20 22:08:18,306 - INFO - Extracting: https://tafsir.app/alaloosi/109/1
+2025-06-20 22:08:23,763 - INFO - Extracting: https://tafsir.app/alaloosi/109/2
+2025-06-20 22:08:28,395 - INFO - Extracting: https://tafsir.app/alaloosi/109/3
+2025-06-20 22:08:31,511 - INFO - Extracting: https://tafsir.app/alaloosi/109/4
+2025-06-20 22:08:34,623 - INFO - Extracting: https://tafsir.app/alaloosi/109/5
+2025-06-20 22:08:40,193 - INFO - Extracting: https://tafsir.app/alaloosi/109/6
+2025-06-20 22:08:44,037 - INFO - Extracting Surah 110: An-Nasr (3 ayahs)
+2025-06-20 22:08:44,038 - INFO - Extracting: https://tafsir.app/alaloosi/110/1
+2025-06-20 22:08:49,339 - INFO - Extracting: https://tafsir.app/alaloosi/110/2
+2025-06-20 22:08:52,513 - INFO - Extracting: https://tafsir.app/alaloosi/110/3
+2025-06-20 22:08:55,703 - INFO - Extracting Surah 111: Al-Masad (5 ayahs)
+2025-06-20 22:08:55,704 - INFO - Extracting: https://tafsir.app/alaloosi/111/1
+2025-06-20 22:08:58,741 - INFO - Extracting: https://tafsir.app/alaloosi/111/2
+2025-06-20 22:09:01,815 - INFO - Extracting: https://tafsir.app/alaloosi/111/3
+2025-06-20 22:09:05,012 - INFO - Extracting: https://tafsir.app/alaloosi/111/4
+2025-06-20 22:09:09,120 - INFO - Extracting: https://tafsir.app/alaloosi/111/5
+2025-06-20 22:09:13,135 - INFO - Extracting Surah 112: Al-Ikhlas (4 ayahs)
+2025-06-20 22:09:13,136 - INFO - Extracting: https://tafsir.app/alaloosi/112/1
+2025-06-20 22:09:17,190 - INFO - Extracting: https://tafsir.app/alaloosi/112/2
+2025-06-20 22:09:20,913 - INFO - Extracting: https://tafsir.app/alaloosi/112/3
+2025-06-20 22:09:24,422 - INFO - Extracting: https://tafsir.app/alaloosi/112/4
+2025-06-20 22:09:28,063 - INFO - Extracting Surah 113: Al-Falaq (5 ayahs)
+2025-06-20 22:09:28,064 - INFO - Extracting: https://tafsir.app/alaloosi/113/1
+2025-06-20 22:09:31,832 - INFO - Extracting: https://tafsir.app/alaloosi/113/2
+2025-06-20 22:09:35,383 - INFO - Extracting: https://tafsir.app/alaloosi/113/3
+2025-06-20 22:09:38,974 - INFO - Extracting: https://tafsir.app/alaloosi/113/4
+2025-06-20 22:10:01,889 - INFO - Extracting: https://tafsir.app/alaloosi/113/5
+2025-06-20 22:10:05,859 - INFO - Extracting Surah 114: An-Nas (6 ayahs)
+2025-06-20 22:10:05,859 - INFO - Extracting: https://tafsir.app/alaloosi/114/1
+2025-06-20 22:10:09,992 - INFO - Extracting: https://tafsir.app/alaloosi/114/2
+2025-06-20 22:10:14,153 - INFO - Extracting: https://tafsir.app/alaloosi/114/3
+2025-06-20 22:10:17,390 - INFO - Extracting: https://tafsir.app/alaloosi/114/4
+2025-06-20 22:10:21,953 - INFO - Extracting: https://tafsir.app/alaloosi/114/5
+2025-06-20 22:10:25,534 - INFO - Extracting: https://tafsir.app/alaloosi/114/6
+2025-06-20 22:10:29,379 - INFO - Data saved to tafsir_data/alaloosi.json
+2025-06-20 22:10:29,400 - INFO - Data saved to tafsir_data/alaloosi.csv
+2025-06-20 22:10:54,669 - INFO - Extracting Surah 105: Al-Fil (5 ayahs)
+2025-06-20 22:10:54,676 - INFO - Extracting: https://tafsir.app/alrazi/105/1
+2025-06-20 22:10:59,160 - INFO - Extracting: https://tafsir.app/alrazi/105/2
+2025-06-20 22:11:02,389 - INFO - Extracting: https://tafsir.app/alrazi/105/3
+2025-06-20 22:11:05,263 - INFO - Extracting: https://tafsir.app/alrazi/105/4
+2025-06-20 22:11:08,117 - INFO - Extracting: https://tafsir.app/alrazi/105/5
+2025-06-20 22:11:11,564 - INFO - Extracting Surah 106: Quraysh (4 ayahs)
+2025-06-20 22:11:11,564 - INFO - Extracting: https://tafsir.app/alrazi/106/1
+2025-06-20 22:11:14,387 - INFO - Extracting: https://tafsir.app/alrazi/106/2
+2025-06-20 22:11:17,444 - INFO - Extracting: https://tafsir.app/alrazi/106/3
+2025-06-20 22:11:20,303 - INFO - Extracting: https://tafsir.app/alrazi/106/4
+2025-06-20 22:11:23,376 - INFO - Extracting Surah 107: Al-Ma'un (7 ayahs)
+2025-06-20 22:11:23,376 - INFO - Extracting: https://tafsir.app/alrazi/107/1
+2025-06-20 22:11:27,494 - INFO - Extracting: https://tafsir.app/alrazi/107/2
+2025-06-20 22:11:31,284 - INFO - Extracting: https://tafsir.app/alrazi/107/3
+2025-06-20 22:11:36,769 - INFO - Extracting: https://tafsir.app/alrazi/107/4
+2025-06-20 22:11:39,132 - INFO - Extracting: https://tafsir.app/alrazi/107/5
+2025-06-20 22:11:42,210 - INFO - Extracting: https://tafsir.app/alrazi/107/6
+2025-06-20 22:11:45,788 - INFO - Extracting: https://tafsir.app/alrazi/107/7
+2025-06-20 22:11:49,008 - INFO - Extracting Surah 108: Al-Kawthar (3 ayahs)
+2025-06-20 22:11:49,009 - INFO - Extracting: https://tafsir.app/alrazi/108/1
+2025-06-20 22:11:52,914 - INFO - Extracting: https://tafsir.app/alrazi/108/2
+2025-06-20 22:11:56,062 - INFO - Extracting: https://tafsir.app/alrazi/108/3
+2025-06-20 22:11:59,478 - INFO - Extracting Surah 109: Al-Kafirun (6 ayahs)
+2025-06-20 22:11:59,479 - INFO - Extracting: https://tafsir.app/alrazi/109/1
+2025-06-20 22:12:03,233 - INFO - Extracting: https://tafsir.app/alrazi/109/2
+2025-06-20 22:12:06,668 - INFO - Extracting: https://tafsir.app/alrazi/109/3
+2025-06-20 22:12:10,202 - INFO - Extracting: https://tafsir.app/alrazi/109/4
+2025-06-20 22:12:13,535 - INFO - Extracting: https://tafsir.app/alrazi/109/5
+2025-06-20 22:12:17,450 - INFO - Extracting: https://tafsir.app/alrazi/109/6
+2025-06-20 22:12:21,100 - INFO - Extracting Surah 110: An-Nasr (3 ayahs)
+2025-06-20 22:12:21,100 - INFO - Extracting: https://tafsir.app/alrazi/110/1
+2025-06-20 22:12:24,512 - INFO - Extracting: https://tafsir.app/alrazi/110/2
+2025-06-20 22:12:27,919 - INFO - Extracting: https://tafsir.app/alrazi/110/3
+2025-06-20 22:12:31,900 - INFO - Extracting Surah 111: Al-Masad (5 ayahs)
+2025-06-20 22:12:31,901 - INFO - Extracting: https://tafsir.app/alrazi/111/1
+2025-06-20 22:12:35,670 - INFO - Extracting: https://tafsir.app/alrazi/111/2
+2025-06-20 22:12:39,779 - INFO - Extracting: https://tafsir.app/alrazi/111/3
+2025-06-20 22:12:43,464 - INFO - Extracting: https://tafsir.app/alrazi/111/4
+2025-06-20 22:12:47,391 - INFO - Extracting: https://tafsir.app/alrazi/111/5
+2025-06-20 22:12:51,478 - INFO - Extracting Surah 112: Al-Ikhlas (4 ayahs)
+2025-06-20 22:12:51,479 - INFO - Extracting: https://tafsir.app/alrazi/112/1
+2025-06-20 22:12:55,311 - INFO - Extracting: https://tafsir.app/alrazi/112/2
+2025-06-20 22:12:59,170 - INFO - Extracting: https://tafsir.app/alrazi/112/3
+2025-06-20 22:13:02,972 - INFO - Extracting: https://tafsir.app/alrazi/112/4
+2025-06-20 22:13:06,818 - INFO - Extracting Surah 113: Al-Falaq (5 ayahs)
+2025-06-20 22:13:06,818 - INFO - Extracting: https://tafsir.app/alrazi/113/1
+2025-06-20 22:13:11,333 - INFO - Extracting: https://tafsir.app/alrazi/113/2
+2025-06-20 22:13:15,552 - INFO - Extracting: https://tafsir.app/alrazi/113/3
+2025-06-20 22:13:19,113 - INFO - Extracting: https://tafsir.app/alrazi/113/4
+2025-06-20 22:13:22,599 - INFO - Extracting: https://tafsir.app/alrazi/113/5
+2025-06-20 22:13:26,213 - INFO - Extracting Surah 114: An-Nas (6 ayahs)
+2025-06-20 22:13:26,215 - INFO - Extracting: https://tafsir.app/alrazi/114/1
+2025-06-20 22:13:29,857 - INFO - Extracting: https://tafsir.app/alrazi/114/2
+2025-06-20 22:13:33,345 - INFO - Extracting: https://tafsir.app/alrazi/114/3
+2025-06-20 22:13:36,886 - INFO - Extracting: https://tafsir.app/alrazi/114/4
+2025-06-20 22:13:40,878 - INFO - Extracting: https://tafsir.app/alrazi/114/5
+2025-06-20 22:13:44,496 - INFO - Extracting: https://tafsir.app/alrazi/114/6
+2025-06-20 22:13:48,059 - INFO - Data saved to tafsir_data/alrazi.json
+2025-06-20 22:13:48,106 - INFO - Data saved to tafsir_data/alrazi.csv
+2025-06-20 22:15:03,315 - INFO - Extracting Surah 105: Al-Fil (5 ayahs)
+2025-06-20 22:15:03,332 - INFO - Extracting: https://tafsir.app/ibn-katheer/105/1
+2025-06-20 22:15:08,031 - INFO - Extracting: https://tafsir.app/ibn-katheer/105/2
+2025-06-20 22:15:11,697 - INFO - Extracting: https://tafsir.app/ibn-katheer/105/3
+2025-06-20 22:15:14,754 - INFO - Extracting: https://tafsir.app/ibn-katheer/105/4
+2025-06-20 22:15:17,876 - INFO - Extracting: https://tafsir.app/ibn-katheer/105/5
+2025-06-20 22:15:20,775 - INFO - Extracting Surah 106: Quraysh (4 ayahs)
+2025-06-20 22:15:20,776 - INFO - Extracting: https://tafsir.app/ibn-katheer/106/1
+2025-06-20 22:15:24,096 - INFO - Extracting: https://tafsir.app/ibn-katheer/106/2
+2025-06-20 22:15:27,580 - INFO - Extracting: https://tafsir.app/ibn-katheer/106/3
+2025-06-20 22:15:30,980 - INFO - Extracting: https://tafsir.app/ibn-katheer/106/4
+2025-06-20 22:15:34,367 - INFO - Extracting Surah 107: Al-Ma'un (7 ayahs)
+2025-06-20 22:15:34,368 - INFO - Extracting: https://tafsir.app/ibn-katheer/107/1
+2025-06-20 22:15:38,630 - INFO - Extracting: https://tafsir.app/ibn-katheer/107/2
+2025-06-20 22:15:41,662 - INFO - Extracting: https://tafsir.app/ibn-katheer/107/3
+2025-06-20 22:15:44,240 - INFO - Extracting: https://tafsir.app/ibn-katheer/107/4
+2025-06-20 22:15:47,288 - INFO - Extracting: https://tafsir.app/ibn-katheer/107/5
+2025-06-20 22:15:50,683 - INFO - Extracting: https://tafsir.app/ibn-katheer/107/6
+2025-06-20 22:15:53,689 - INFO - Extracting: https://tafsir.app/ibn-katheer/107/7
+2025-06-20 22:15:56,856 - INFO - Extracting Surah 108: Al-Kawthar (3 ayahs)
+2025-06-20 22:15:56,857 - INFO - Extracting: https://tafsir.app/ibn-katheer/108/1
+2025-06-20 22:16:00,152 - INFO - Extracting: https://tafsir.app/ibn-katheer/108/2
+2025-06-20 22:16:03,099 - INFO - Extracting: https://tafsir.app/ibn-katheer/108/3
+2025-06-20 22:16:05,928 - INFO - Extracting Surah 109: Al-Kafirun (6 ayahs)
+2025-06-20 22:16:05,930 - INFO - Extracting: https://tafsir.app/ibn-katheer/109/1
+2025-06-20 22:16:08,977 - INFO - Extracting: https://tafsir.app/ibn-katheer/109/2
+2025-06-20 22:16:12,614 - INFO - Extracting: https://tafsir.app/ibn-katheer/109/3
+2025-06-20 22:16:15,572 - INFO - Extracting: https://tafsir.app/ibn-katheer/109/4
+2025-06-20 22:16:19,118 - INFO - Extracting: https://tafsir.app/ibn-katheer/109/5
+2025-06-20 22:16:22,567 - INFO - Extracting: https://tafsir.app/ibn-katheer/109/6
+2025-06-20 22:16:25,068 - INFO - Extracting Surah 110: An-Nasr (3 ayahs)
+2025-06-20 22:16:25,070 - INFO - Extracting: https://tafsir.app/ibn-katheer/110/1
+2025-06-20 22:16:28,471 - INFO - Extracting: https://tafsir.app/ibn-katheer/110/2
+2025-06-20 22:16:32,109 - INFO - Extracting: https://tafsir.app/ibn-katheer/110/3
+2025-06-20 22:16:37,633 - INFO - Extracting Surah 111: Al-Masad (5 ayahs)
+2025-06-20 22:16:37,634 - INFO - Extracting: https://tafsir.app/ibn-katheer/111/1
+2025-06-20 22:16:42,554 - INFO - Extracting: https://tafsir.app/ibn-katheer/111/2
+2025-06-20 22:16:45,964 - INFO - Extracting: https://tafsir.app/ibn-katheer/111/3
+2025-06-20 22:16:49,314 - INFO - Extracting: https://tafsir.app/ibn-katheer/111/4
+2025-06-20 22:16:52,722 - INFO - Extracting: https://tafsir.app/ibn-katheer/111/5
+2025-06-20 22:16:56,272 - INFO - Extracting Surah 112: Al-Ikhlas (4 ayahs)
+2025-06-20 22:16:56,274 - INFO - Extracting: https://tafsir.app/ibn-katheer/112/1
+2025-06-20 22:17:00,014 - INFO - Extracting: https://tafsir.app/ibn-katheer/112/2
+2025-06-20 22:17:03,746 - INFO - Extracting: https://tafsir.app/ibn-katheer/112/3
+2025-06-20 22:17:07,656 - INFO - Extracting: https://tafsir.app/ibn-katheer/112/4
+2025-06-20 22:17:11,133 - INFO - Extracting Surah 113: Al-Falaq (5 ayahs)
+2025-06-20 22:17:11,134 - INFO - Extracting: https://tafsir.app/ibn-katheer/113/1
+2025-06-20 22:17:15,117 - INFO - Extracting: https://tafsir.app/ibn-katheer/113/2
+2025-06-20 22:17:18,811 - INFO - Extracting: https://tafsir.app/ibn-katheer/113/3
+2025-06-20 22:17:22,468 - INFO - Extracting: https://tafsir.app/ibn-katheer/113/4
+2025-06-20 22:17:25,957 - INFO - Extracting: https://tafsir.app/ibn-katheer/113/5
+2025-06-20 22:17:29,768 - INFO - Extracting Surah 114: An-Nas (6 ayahs)
+2025-06-20 22:17:29,770 - INFO - Extracting: https://tafsir.app/ibn-katheer/114/1
+2025-06-20 22:17:33,291 - INFO - Extracting: https://tafsir.app/ibn-katheer/114/2
+2025-06-20 22:17:36,760 - INFO - Extracting: https://tafsir.app/ibn-katheer/114/3
+2025-06-20 22:17:40,312 - INFO - Extracting: https://tafsir.app/ibn-katheer/114/4
+2025-06-20 22:17:43,604 - INFO - Extracting: https://tafsir.app/ibn-katheer/114/5
+2025-06-20 22:17:46,918 - INFO - Extracting: https://tafsir.app/ibn-katheer/114/6
+2025-06-20 22:17:50,373 - INFO - Data saved to tafsir_data/ibn-katheer.json
+2025-06-20 22:17:50,439 - INFO - Data saved to tafsir_data/ibn-katheer.csv

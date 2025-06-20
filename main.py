@@ -43,9 +43,9 @@ class TafsirContent:
     surah_name_arabic: str
     surah_name_english: str
     ayah_number: int
-    ayah_text_arabic: str
-    ayah_text_transliteration: str
-    ayah_text_translation: str
+    #ayah_text_arabic: str
+    #ayah_text_transliteration: str
+    #ayah_text_translation: str
     tafsir_text: str
     tafsir_author: str
     url: str
@@ -234,40 +234,40 @@ class TafsirExtractor:
             # This is a template parser - you'll need to adjust selectors based on actual HTML structure
             # Common selectors that might be present on Islamic websites:
             
-            # Extract Arabic text of the ayah
-            ayah_arabic = ""
-            arabic_selectors = [
-                '.ayah-text', '.arabic-text', '.quran-text', 
-                '[class*="arabic"]', '[class*="ayah"]', '.verse-arabic'
-            ]
-            for selector in arabic_selectors:
-                element = soup.select_one(selector)
-                if element:
-                    ayah_arabic = element.get_text(strip=True)
-                    break
+            # # Extract Arabic text of the ayah
+            # ayah_arabic = ""
+            # arabic_selectors = [
+            #     '.ayah-text', '.arabic-text', '.quran-text',  
+            #     '[class*="arabic"]', '[class*="ayah"]', '.verse-arabic'
+            # ]
+            # for selector in arabic_selectors:
+            #     element = soup.select_one(selector)
+            #     if element:
+            #         ayah_arabic = element.get_text(strip=True)
+            #         break
             
-            # Extract transliteration
-            transliteration = ""
-            transliteration_selectors = [
-                '.transliteration', '.romanized', '[class*="transliteration"]'
-            ]
-            for selector in transliteration_selectors:
-                element = soup.select_one(selector)
-                if element:
-                    transliteration = element.get_text(strip=True)
-                    break
+            # # Extract transliteration
+            # transliteration = ""
+            # transliteration_selectors = [
+            #     '.transliteration', '.romanized', '[class*="transliteration"]'
+            # ]
+            # for selector in transliteration_selectors:
+            #     element = soup.select_one(selector)
+            #     if element:
+            #         transliteration = element.get_text(strip=True)
+            #         break
             
-            # Extract translation
-            translation = ""
-            translation_selectors = [
-                '.translation', '.english-text', '[class*="translation"]', 
-                '.meaning', '[class*="meaning"]'
-            ]
-            for selector in translation_selectors:
-                element = soup.select_one(selector)
-                if element:
-                    translation = element.get_text(strip=True)
-                    break
+            # # Extract translation
+            # translation = ""
+            # translation_selectors = [
+            #     '.translation', '.english-text', '[class*="translation"]', 
+            #     '.meaning', '[class*="meaning"]'
+            # ]
+            # for selector in translation_selectors:
+            #     element = soup.select_one(selector)
+            #     if element:
+            #         translation = element.get_text(strip=True)
+            #         break
             
             # Extract tafsir text
             tafsir_text = ""
@@ -299,9 +299,9 @@ class TafsirExtractor:
                 surah_name_arabic=surah_info.name_arabic,
                 surah_name_english=surah_info.name_english,
                 ayah_number=ayah,
-                ayah_text_arabic=ayah_arabic,
-                ayah_text_transliteration=transliteration,
-                ayah_text_translation=translation,
+                #ayah_text_arabic=ayah_arabic,
+                #ayah_text_transliteration=transliteration,
+                #ayah_text_translation=translation,
                 tafsir_text=tafsir_text,
                 tafsir_author=self.tafsir_author_name,
                 url=f"{self.base_url}/{surah}/{ayah}",
@@ -380,7 +380,7 @@ class TafsirExtractor:
     def save_to_json(self, data: List[TafsirContent], filename: str = None):
         """Save extracted data to JSON file"""
         if filename is None:
-            filename = f"tafsir_data_{self.tafsir_author_key}.json"
+            filename = f"tafsir_data/{self.tafsir_author_key}.json"
         try:
             with open(filename, 'w', encoding='utf-8') as f:
                 json.dump([asdict(item) for item in data], f, ensure_ascii=False, indent=2)
@@ -391,7 +391,7 @@ class TafsirExtractor:
     def save_to_csv(self, data: List[TafsirContent], filename: str = None):
         """Save extracted data to CSV file"""
         if filename is None:
-            filename = f"tafsir_data_{self.tafsir_author_key}.csv"
+            filename = f"tafsir_data/{self.tafsir_author_key}.csv"
         try:
             df = pd.DataFrame([asdict(item) for item in data])
             df.to_csv(filename, index=False, encoding='utf-8')
@@ -500,19 +500,19 @@ def main():
         extractor.save_to_json(results)
         extractor.save_to_csv(results)
         
-        # Print database schema
-        print("\n=== Database Schema ===")
-        print(extractor.create_database_schema())
+        # # Print database schema
+        # print("\n=== Database Schema ===")
+        # print(extractor.create_database_schema())
         
-        # Save schema to file
-        with open("database_schema.sql", "w") as f:
-            f.write(extractor.create_database_schema())
+        # # Save schema to file
+        # with open("database_schema.sql", "w") as f:
+        #     f.write(extractor.create_database_schema())
         
         print(f"\nExtraction completed successfully!")
         print(f"Files created:")
-        print(f"- tafsir_data_{extractor.tafsir_author_key}.json: {len(results)} records")
-        print(f"- tafsir_data_{extractor.tafsir_author_key}.csv: {len(results)} records")
-        print(f"- database_schema.sql: SQL schema for database creation")
+        print(f"- tafsir_data/{extractor.tafsir_author_key}.json: {len(results)} records")
+        print(f"- tafsir_data/{extractor.tafsir_author_key}.csv: {len(results)} records")
+        #print(f"- database_schema.sql: SQL schema for database creation")
         print(f"- tafsir_extraction.log: Extraction log file")
         print(f"- Author: {extractor.tafsir_author_name} ({extractor.tafsir_author_key})")
 
