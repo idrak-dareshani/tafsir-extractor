@@ -365,9 +365,9 @@ class TafsirExtractor:
                 self.save_to_json(surah_results, surah_numbers=[surah_num])
                 self.save_to_csv(surah_results, surah_numbers=[surah_num])
             
-            # Save intermediate results every 10 surahs
-            if surah_num % 10 == 0:
-                self._save_intermediate_results(all_results, f"intermediate_surah_{surah_num}")
+            # # Save intermediate results every 10 surahs
+            # if surah_num % 10 == 0:
+            #     self._save_intermediate_results(all_results, f"intermediate_surah_{surah_num}")
         
         return all_results
 
@@ -532,18 +532,22 @@ def main():
             json_filename = extractor.save_to_json(results, surah_numbers=surah_numbers)
             csv_filename = extractor.save_to_csv(results, surah_numbers=surah_numbers)
         
-        print(f"\nExtraction completed successfully!")
-        print(f"Files created:")
-        if json_filename:
-            print(f"- {json_filename}: {len(results)} records")
-        if csv_filename:
-            print(f"- {csv_filename}: {len(results)} records")
-        print(f"- tafsir_extraction.log: Extraction log file")
-        print(f"- Author: {extractor.tafsir_author_name} ({extractor.tafsir_author_key})")
-        
+            print(f"\nExtraction completed successfully!")
+            print(f"Files created:")
+            if json_filename:
+                print(f"- {json_filename}: {len(results)} records")
+            if csv_filename:
+                print(f"- {csv_filename}: {len(results)} records")
+            print(f"- tafsir_extraction.log: Extraction log file")
+            print(f"- Author: {extractor.tafsir_author_name} ({extractor.tafsir_author_key})")
+
+        if choice == "3":  # Extract specific
+            print(f"\nNote: Individual surah files have been created for each of the selected surahs.")
+            print(f"Format: {extractor.tafsir_author_key}/{{surah_number}}.json and {extractor.tafsir_author_key}/{{surah_number}}.csv")
+
         if choice == "4":  # Extract all
             print(f"\nNote: Individual surah files have been created for each of the 114 surahs.")
-            print(f"Format: {extractor.tafsir_author_key}_{{surah_number}}.json and {extractor.tafsir_author_key}_{{surah_number}}.csv")
+            print(f"Format: {extractor.tafsir_author_key}/{{surah_number}}.json and {extractor.tafsir_author_key}/{{surah_number}}.csv")
 
 if __name__ == "__main__":
     main()
