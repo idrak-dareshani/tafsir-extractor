@@ -15,6 +15,7 @@ Usage:
 import requests
 import json
 import time
+import os
 import csv
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
@@ -70,9 +71,7 @@ class TafsirExtractor:
             "alrazi": "Al-Razi", 
             "ibn-katheer": "Ibn Katheer",
             "tabari": "At-Tabari",
-            "qurtubi": "Al-Qurtubi",
-            "aliraab-almuyassar": "Al-Iraab Muyassar",
-            "iraab-daas": "Iraab Daas"
+            "qurtubi": "Al-Qurtubi"
         }
         
         if tafsir_author not in self.available_authors:
@@ -234,40 +233,40 @@ class TafsirExtractor:
             # This is a template parser - you'll need to adjust selectors based on actual HTML structure
             # Common selectors that might be present on Islamic websites:
             
-            # # Extract Arabic text of the ayah
-            # ayah_arabic = ""
-            # arabic_selectors = [
-            #     '.ayah-text', '.arabic-text', '.quran-text',  
-            #     '[class*="arabic"]', '[class*="ayah"]', '.verse-arabic'
-            # ]
-            # for selector in arabic_selectors:
-            #     element = soup.select_one(selector)
-            #     if element:
-            #         ayah_arabic = element.get_text(strip=True)
-            #         break
+            # Extract Arabic text of the ayah
+            ayah_arabic = ""
+            arabic_selectors = [
+                '.ayah-text', '.arabic-text', '.quran-text', 
+                '[class*="arabic"]', '[class*="ayah"]', '.verse-arabic'
+            ]
+            for selector in arabic_selectors:
+                element = soup.select_one(selector)
+                if element:
+                    ayah_arabic = element.get_text(strip=True)
+                    break
             
-            # # Extract transliteration
-            # transliteration = ""
-            # transliteration_selectors = [
-            #     '.transliteration', '.romanized', '[class*="transliteration"]'
-            # ]
-            # for selector in transliteration_selectors:
-            #     element = soup.select_one(selector)
-            #     if element:
-            #         transliteration = element.get_text(strip=True)
-            #         break
+            # Extract transliteration
+            transliteration = ""
+            transliteration_selectors = [
+                '.transliteration', '.romanized', '[class*="transliteration"]'
+            ]
+            for selector in transliteration_selectors:
+                element = soup.select_one(selector)
+                if element:
+                    transliteration = element.get_text(strip=True)
+                    break
             
-            # # Extract translation
-            # translation = ""
-            # translation_selectors = [
-            #     '.translation', '.english-text', '[class*="translation"]', 
-            #     '.meaning', '[class*="meaning"]'
-            # ]
-            # for selector in translation_selectors:
-            #     element = soup.select_one(selector)
-            #     if element:
-            #         translation = element.get_text(strip=True)
-            #         break
+            # Extract translation
+            translation = ""
+            translation_selectors = [
+                '.translation', '.english-text', '[class*="translation"]', 
+                '.meaning', '[class*="meaning"]'
+            ]
+            for selector in translation_selectors:
+                element = soup.select_one(selector)
+                if element:
+                    translation = element.get_text(strip=True)
+                    break
             
             # Extract tafsir text
             tafsir_text = ""
@@ -351,7 +350,27 @@ class TafsirExtractor:
                 logger.warning(f"Failed to extract Surah {surah}, Ayah {ayah}")
         
         return results
-    
+
+    def extract_multiple_surah(self, start_surah: int, end_surah: int) -> List[TafsirContent]:
+        """Extract tafsir content for the selected surah"""
+        logger.info("Starting extraction of selected surah")
+        all_results = []
+        
+        for surah_num in tqdm(range(start_surah, end_surah+1), desc="Surahs"):
+            surah_results = self.extract_surah(surah_num)
+            all_results.extend(surah_results)
+            
+            # Save each surah individually
+            if surah_results:
+                self.save_to_json(surah_results, surah_numbers=[surah_num])
+                self.save_to_csv(surah_results, surah_numbers=[surah_num])
+            
+            # Save intermediate results every 10 surahs
+            if surah_num % 10 == 0:
+                self._save_intermediate_results(all_results, f"intermediate_surah_{surah_num}")
+        
+        return all_results
+
     def extract_all(self) -> List[TafsirContent]:
         """Extract tafsir content for the entire Quran"""
         logger.info("Starting extraction of entire Quran tafsir")
@@ -361,9 +380,14 @@ class TafsirExtractor:
             surah_results = self.extract_surah(surah_num)
             all_results.extend(surah_results)
             
-            # Save intermediate results every 10 surahs
-            if surah_num % 10 == 0:
-                self._save_intermediate_results(all_results, f"intermediate_surah_{surah_num}")
+            # Save each surah individually
+            if surah_results:
+                self.save_to_json(surah_results, surah_numbers=[surah_num])
+                self.save_to_csv(surah_results, surah_numbers=[surah_num])
+            
+            # # Save intermediate results every 10 surahs
+            # if surah_num % 10 == 0:
+            #     self._save_intermediate_results(all_results, f"intermediate_surah_{surah_num}")
         
         return all_results
     
@@ -377,52 +401,55 @@ class TafsirExtractor:
         except Exception as e:
             logger.error(f"Failed to save intermediate results: {e}")
     
-    def save_to_json(self, data: List[TafsirContent], filename: str = None):
+    def save_to_json(self, data: List[TafsirContent], filename: str = None, surah_numbers: List[int] = None):
         """Save extracted data to JSON file"""
         if filename is None:
-            filename = f"tafsir_data/{self.tafsir_author_key}.json"
+            if surah_numbers and len(set(surah_numbers)) == 1:
+                # Single surah
+                surah_num = surah_numbers[0]
+                os.makedirs(f"tafsir_data/{self.tafsir_author_key}", exist_ok=True)
+                filename = f"tafsir_data/{self.tafsir_author_key}/{surah_num}.json"
+            elif surah_numbers and len(set(surah_numbers)) > 1:
+                # Multiple surahs
+                min_surah = min(surah_numbers)
+                max_surah = max(surah_numbers)
+                filename = f"{self.tafsir_author_key}_{min_surah}-{max_surah}.json"
+            else:
+                # Default fallback
+                filename = f"{self.tafsir_author_key}_all.json"
         try:
             with open(filename, 'w', encoding='utf-8') as f:
                 json.dump([asdict(item) for item in data], f, ensure_ascii=False, indent=2)
             logger.info(f"Data saved to {filename}")
+            return filename
         except Exception as e:
             logger.error(f"Failed to save JSON: {e}")
+            return None
     
-    def save_to_csv(self, data: List[TafsirContent], filename: str = None):
+    def save_to_csv(self, data: List[TafsirContent], filename: str = None, surah_numbers: List[int] = None):
         """Save extracted data to CSV file"""
         if filename is None:
-            filename = f"tafsir_data/{self.tafsir_author_key}.csv"
+            if surah_numbers and len(set(surah_numbers)) == 1:
+                # Single surah
+                surah_num = surah_numbers[0]
+                os.makedirs(f"tafsir_data/{self.tafsir_author_key}", exist_ok=True)
+                filename = f"tafsir_data/{self.tafsir_author_key}/{surah_num}.csv"
+            elif surah_numbers and len(set(surah_numbers)) > 1:
+                # Multiple surahs
+                min_surah = min(surah_numbers)
+                max_surah = max(surah_numbers)
+                filename = f"{self.tafsir_author_key}_{min_surah}-{max_surah}.csv"
+            else:
+                # Default fallback
+                filename = f"{self.tafsir_author_key}_all.csv"
         try:
             df = pd.DataFrame([asdict(item) for item in data])
             df.to_csv(filename, index=False, encoding='utf-8')
             logger.info(f"Data saved to {filename}")
+            return filename
         except Exception as e:
             logger.error(f"Failed to save CSV: {e}")
-    
-    def create_database_schema(self) -> str:
-        """Generate SQL schema for storing tafsir data"""
-        return """
-        CREATE TABLE IF NOT EXISTS tafsir_content (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            surah_number INTEGER NOT NULL,
-            surah_name_arabic TEXT NOT NULL,
-            surah_name_english TEXT NOT NULL,
-            ayah_number INTEGER NOT NULL,
-            ayah_text_arabic TEXT,
-            ayah_text_transliteration TEXT,
-            ayah_text_translation TEXT,
-            tafsir_text TEXT,
-            tafsir_author TEXT,
-            url TEXT,
-            extraction_timestamp TEXT,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            UNIQUE(surah_number, ayah_number)
-        );
-        
-        CREATE INDEX IF NOT EXISTS idx_surah_ayah ON tafsir_content(surah_number, ayah_number);
-        CREATE INDEX IF NOT EXISTS idx_surah ON tafsir_content(surah_number);
-        CREATE INDEX IF NOT EXISTS idx_extraction_timestamp ON tafsir_content(extraction_timestamp);
-        """
+            return None
 
 def main():
     """Main execution function"""
@@ -434,16 +461,14 @@ def main():
         "2": ("alrazi", "Al-Razi"),
         "3": ("ibn-katheer", "Ibn Katheer"),
         "4": ("tabari", "At-Tabari"),
-        "5": ("qurtubi", "Al-Qurtubi"),
-        "6": ("aliraab-almuyassar", "Al-Iraab Muyassar"),
-        "7": ("iraab-daas", "Iraab Daas")
+        "5": ("qurtubi", "Al-Qurtubi")
     }
     
     print("\nAvailable Tafsir Authors:")
     for key, (author_key, author_name) in available_authors.items():
         print(f"{key}. {author_name} ({author_key})")
     
-    author_choice = input("Select tafsir author (1-5) or iraab author (6,7): ").strip()
+    author_choice = input("Select tafsir author (1-5): ").strip()
     
     if author_choice not in available_authors:
         print("Invalid choice. Defaulting to Al-Razi.")
@@ -459,7 +484,7 @@ def main():
     print("\nExtraction Options:")
     print("1. Extract single ayah")
     print("2. Extract entire surah")
-    print("3. Extract specific range")
+    print("3. Extract specific range (WARNING: This will take some time)")
     print("4. Extract all (WARNING: This will take a very long time)")
     
     choice = input("Enter your choice (1-4): ").strip()
@@ -483,10 +508,13 @@ def main():
     elif choice == "3":
         start_surah = int(input("Enter start surah number: "))
         end_surah = int(input("Enter end surah number: "))
-        for surah_num in range(start_surah, end_surah + 1):
-            surah_results = extractor.extract_surah(surah_num)
-            results.extend(surah_results)
-        print(f"\nExtracted {len(results)} total ayahs from Surahs {start_surah}-{end_surah} - {extractor.tafsir_author_name}")
+        confirm = input(f"This will extract the multiple surah from {extractor.tafsir_author_name}. This may take some time. Continue? (yes/no): ")
+        if confirm.lower() == 'yes':
+            results = extractor.extract_multiple_surah(start_surah, end_surah)
+        # for surah_num in range(start_surah, end_surah + 1):
+        #     surah_results = extractor.extract_surah(surah_num)
+        #     results.extend(surah_results)
+            print(f"\nExtracted {len(results)} total ayahs from Surahs {start_surah}-{end_surah} - {extractor.tafsir_author_name}")
     
     elif choice == "4":
         confirm = input(f"This will extract the entire Quran from {extractor.tafsir_author_name}. This may take hours. Continue? (yes/no): ")
@@ -496,25 +524,26 @@ def main():
     
     # Save results
     if results:
-        # Save to JSON and CSV with author-specific filenames
-        extractor.save_to_json(results)
-        extractor.save_to_csv(results)
+        # Get surah numbers from results for filename generation
+        surah_numbers = list(set([result.surah_number for result in results]))
         
-        # # Print database schema
-        # print("\n=== Database Schema ===")
-        # print(extractor.create_database_schema())
-        
-        # # Save schema to file
-        # with open("database_schema.sql", "w") as f:
-        #     f.write(extractor.create_database_schema())
+        if choice == "1" and choice == "2":
+            # Save to JSON and CSV with surah-specific filenames
+            json_filename = extractor.save_to_json(results, surah_numbers=surah_numbers)
+            csv_filename = extractor.save_to_csv(results, surah_numbers=surah_numbers)
         
         print(f"\nExtraction completed successfully!")
         print(f"Files created:")
-        print(f"- tafsir_data/{extractor.tafsir_author_key}.json: {len(results)} records")
-        print(f"- tafsir_data/{extractor.tafsir_author_key}.csv: {len(results)} records")
-        #print(f"- database_schema.sql: SQL schema for database creation")
+        if json_filename:
+            print(f"- {json_filename}: {len(results)} records")
+        if csv_filename:
+            print(f"- {csv_filename}: {len(results)} records")
         print(f"- tafsir_extraction.log: Extraction log file")
         print(f"- Author: {extractor.tafsir_author_name} ({extractor.tafsir_author_key})")
+        
+        if choice == "4":  # Extract all
+            print(f"\nNote: Individual surah files have been created for each of the 114 surahs.")
+            print(f"Format: {extractor.tafsir_author_key}_{{surah_number}}.json and {extractor.tafsir_author_key}_{{surah_number}}.csv")
 
 if __name__ == "__main__":
     main()
