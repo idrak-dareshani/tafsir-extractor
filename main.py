@@ -407,8 +407,8 @@ class TafsirExtractor:
             if surah_numbers and len(set(surah_numbers)) == 1:
                 # Single surah
                 surah_num = surah_numbers[0]
-                os.makedirs(f"tafsir_data/{self.tafsir_author_key}", exist_ok=True)
-                filename = f"tafsir_data/{self.tafsir_author_key}/{surah_num}.json"
+                os.makedirs(f"data/{self.tafsir_author_key}", exist_ok=True)
+                filename = f"data/{self.tafsir_author_key}/{surah_num}.json"
             elif surah_numbers and len(set(surah_numbers)) > 1:
                 # Multiple surahs
                 min_surah = min(surah_numbers)
@@ -432,8 +432,8 @@ class TafsirExtractor:
             if surah_numbers and len(set(surah_numbers)) == 1:
                 # Single surah
                 surah_num = surah_numbers[0]
-                os.makedirs(f"tafsir_data/{self.tafsir_author_key}", exist_ok=True)
-                filename = f"tafsir_data/{self.tafsir_author_key}/{surah_num}.csv"
+                os.makedirs(f"data/{self.tafsir_author_key}", exist_ok=True)
+                filename = f"data/{self.tafsir_author_key}/{surah_num}.csv"
             elif surah_numbers and len(set(surah_numbers)) > 1:
                 # Multiple surahs
                 min_surah = min(surah_numbers)
