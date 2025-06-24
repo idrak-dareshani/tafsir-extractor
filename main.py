@@ -286,6 +286,12 @@ class TafsirExtractor:
                 if main_content:
                     tafsir_text = main_content.get_text(strip=True)
             
+            # Remove content after last occurrence of '\n' if it exists
+            if tafsir_text:
+                last_newline_index = tafsir_text.rfind('\n')
+                if last_newline_index != -1:
+                    tafsir_text = tafsir_text[:last_newline_index].strip()
+            
             # Get surah information
             surah_info = self.surah_info.get(surah)
             if not surah_info:
@@ -527,7 +533,7 @@ def main():
         # Get surah numbers from results for filename generation
         surah_numbers = list(set([result.surah_number for result in results]))
         
-        if choice == "1" and choice == "2":
+        if choice == "1" or choice == "2":
             # Save to JSON and CSV with surah-specific filenames
             json_filename = extractor.save_to_json(results, surah_numbers=surah_numbers)
             csv_filename = extractor.save_to_csv(results, surah_numbers=surah_numbers)
@@ -541,11 +547,11 @@ def main():
             print(f"- tafsir_extraction.log: Extraction log file")
             print(f"- Author: {extractor.tafsir_author_name} ({extractor.tafsir_author_key})")
 
-        if choice == "3":  # Extract specific
+        elif choice == "3":  # Extract specific
             print(f"\nNote: Individual surah files have been created for each of the selected surahs.")
             print(f"Format: {extractor.tafsir_author_key}/{{surah_number}}.json and {extractor.tafsir_author_key}/{{surah_number}}.csv")
 
-        if choice == "4":  # Extract all
+        elif choice == "4":  # Extract all
             print(f"\nNote: Individual surah files have been created for each of the 114 surahs.")
             print(f"Format: {extractor.tafsir_author_key}/{{surah_number}}.json and {extractor.tafsir_author_key}/{{surah_number}}.csv")
 
