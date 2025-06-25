@@ -71,7 +71,9 @@ class TafsirExtractor:
             "alrazi": "Al-Razi", 
             "ibn-katheer": "Ibn Katheer",
             "tabari": "At-Tabari",
-            "qurtubi": "Al-Qurtubi"
+            "qurtubi": "Al-Qurtubi",
+            "ibn-aashoor": "Ibn Ashur",
+            "iraab-daas": "Iraab ul Quran"
         }
         
         if tafsir_author not in self.available_authors:
@@ -288,7 +290,7 @@ class TafsirExtractor:
             
             # Remove content after last occurrence of '\n' if it exists
             if tafsir_text:
-                last_newline_index = tafsir_text.rfind('\n')
+                last_newline_index = tafsir_text.rfind('{"ayah')
                 if last_newline_index != -1:
                     tafsir_text = tafsir_text[:last_newline_index].strip()
             
@@ -467,7 +469,9 @@ def main():
         "2": ("alrazi", "Al-Razi"),
         "3": ("ibn-katheer", "Ibn Katheer"),
         "4": ("tabari", "At-Tabari"),
-        "5": ("qurtubi", "Al-Qurtubi")
+        "5": ("qurtubi", "Al-Qurtubi"),
+        "6": ("ibn-aashoor", "Ibn Ashur"),
+        "7": ("iraab-daas", "Iraab ul Quran")
     }
     
     print("\nAvailable Tafsir Authors:")
