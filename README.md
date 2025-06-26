@@ -44,4 +44,4 @@ Extracted files are saved in `data/<author>/` and named by surah (e.g. `data/alr
 ## Notes
 
 - Extraction of the entire Quran may take several hours.
-- Please use responsibly and respect [tafsir.app](https://tafsir.app) terms of
+- Please use responsibly and respect [tafsir.app](https://tafsir.app) terms of service.
