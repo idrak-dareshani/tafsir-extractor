@@ -232,67 +232,17 @@ class TafsirExtractor:
         try:
             soup = BeautifulSoup(html_content, 'lxml')
             
-            # This is a template parser - you'll need to adjust selectors based on actual HTML structure
-            # Common selectors that might be present on Islamic websites:
-            
             # Extract Arabic text of the ayah
-            ayah_arabic = ""
-            arabic_selectors = [
-                '.ayah-text', '.arabic-text', '.quran-text', 
-                '[class*="arabic"]', '[class*="ayah"]', '.verse-arabic'
-            ]
-            for selector in arabic_selectors:
-                element = soup.select_one(selector)
-                if element:
-                    ayah_arabic = element.get_text(strip=True)
-                    break
-            
-            # Extract transliteration
-            transliteration = ""
-            transliteration_selectors = [
-                '.transliteration', '.romanized', '[class*="transliteration"]'
-            ]
-            for selector in transliteration_selectors:
-                element = soup.select_one(selector)
-                if element:
-                    transliteration = element.get_text(strip=True)
-                    break
-            
-            # Extract translation
-            translation = ""
-            translation_selectors = [
-                '.translation', '.english-text', '[class*="translation"]', 
-                '.meaning', '[class*="meaning"]'
-            ]
-            for selector in translation_selectors:
-                element = soup.select_one(selector)
-                if element:
-                    translation = element.get_text(strip=True)
-                    break
+            ayah_div = soup.find('div', id='preloaded-data')
+            ayah_text = ayah_div.get_text()
+            json_data = json.loads(ayah_text)
+            ayah_arabic = json_data.get('ayah')
             
             # Extract tafsir text
-            tafsir_text = ""
-            tafsir_selectors = [
-                '.tafsir-text', '.commentary', '.tafseer', 
-                '[class*="tafsir"]', '[class*="commentary"]', '.content'
-            ]
-            for selector in tafsir_selectors:
-                element = soup.select_one(selector)
-                if element:
-                    tafsir_text = element.get_text(strip=True)
-                    break
-            
-            # If specific selectors don't work, try to get the main content
-            if not tafsir_text:
-                main_content = soup.select_one('main, .main-content, #content, .page-content')
-                if main_content:
-                    tafsir_text = main_content.get_text(strip=True)
-            
-            # Remove content after last occurrence of '\n' if it exists
-            if tafsir_text:
-                last_newline_index = tafsir_text.rfind('{"ayah')
-                if last_newline_index != -1:
-                    tafsir_text = tafsir_text[:last_newline_index].strip()
+            tafsir_div = soup.find('div', id='preloaded-text')
+            tafsir_text = tafsir_div.get_text(separator='\n')
+            lines = [line.strip() for line in tafsir_text.splitlines()]
+            tafsir_text = '\n'.join([line for line in lines if line])
             
             # Get surah information
             surah_info = self.surah_info.get(surah)
